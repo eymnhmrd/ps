@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 01:00:58 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/24 02:35:21 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/24 22:33:08 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_check_duplicates(char **av, int ac)
 		while (j < ac)
 		{
 			if ((ft_atoi(av[i]) == ft_atoi(av[j])))
-				ft_error();
+				ft_error_free(av);
 			j++;
 		}
 		i++;

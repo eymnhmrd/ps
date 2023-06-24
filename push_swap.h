@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 22:38:19 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/24 02:35:51 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/25 00:26:47 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +55,18 @@ void	pb(t_stack **a, t_stack **b);
 int		ft_isdigit(int c);
 void	ft_check_number(char *number, char **tab);
 void	ft_check_duplicates(char **av, int count);
-char    **join_args(char **av, int ac);
+char	**join_args(char **av, int ac);
 void	ft_check_limits(char *number, char **tab);
 int		ft_check_arguments_limits(char **av, int count);
 
 char	**ft_split(char const *s, char c);
 char	*ft_strjoin(char *s1, char *s2);
 void	free_tab2d(char **arr);
-void    ft_error(void);
-int     ft_tablen(char **tab);
+void	ft_error(void);
+int		ft_tablen(char **tab);
 int		ft_strlen(char *s);
 long	ft_atoi(char *str);
 void	ft_putstr(char *str);
-void    ft_error_free(char **tab);
+void	ft_error_free(char **tab);
+
 #endif

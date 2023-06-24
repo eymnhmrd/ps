@@ -6,75 +6,76 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 02:47:06 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/24 02:33:21 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/25 00:29:02 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_error_free(char **tab)
+void	ft_error_free(char **tab)
 {
-    free_tab2d(tab);
-    ft_putstr("Error\n");
-    exit(EXIT_FAILURE);
-}
-void    ft_error(void)
-{
-    ft_putstr("Error\n");
-    exit(EXIT_FAILURE);
+	free_tab2d(tab);
+	ft_putstr("Error\n");
+	exit(EXIT_FAILURE);
 }
 
-int     ft_tablen(char **tab)
+void	ft_error(void)
 {
-    int i;
-
-    i = 0;
-    if (!tab)
-        return (0);
-    while (tab[i])
-        i++;
-    return (i);
+	ft_putstr("Error\n");
+	exit(EXIT_FAILURE);
 }
 
-void    ft_check_arg_space(char *number)
+int	ft_tablen(char **tab)
 {
-    int i;
-    int space;
+	int	i;
 
-    i = 0;
-    space = 0;
-    while (number[i])
-    {
-        if (number[i] == ' ')
-            space++;
-        i++;
-    }
-    if (space == i)
-        ft_error();
+	i = 0;
+	if (!tab)
+		return (0);
+	while (tab[i])
+		i++;
+	return (i);
 }
 
-char    **join_args(char **av, int ac)
+void	ft_check_arg_space(char *number)
 {
-    char    **new_av;
-    char    *total;
-    int     i;
+	int	i;
+	int	space;
 
-    i = 1;
-    total = malloc(sizeof(char));
-    if (!total)
-        exit(EXIT_FAILURE);
-    total[0] = '\0';
-    while (i <= ac)
-    {
-        ft_check_arg_space(av[i]);
-        if (!av[i][0])
-            ft_error();
-        total = ft_strjoin(total, av[i]); // free total
-        total = ft_strjoin(total, " ");
-        i++;
-    }
-    new_av = ft_split(total, ' ');
-    if (total)
-        free(total);
-    return (new_av);
+	i = 0;
+	space = 0;
+	while (number[i])
+	{
+		if (number[i] == ' ')
+			space++;
+		i++;
+	}
+	if (space == i)
+		ft_error();
+}
+
+char	**join_args(char **av, int ac)
+{
+	char	**new_av;
+	char	*total;
+	int		i;
+
+	i = 1;
+	total = malloc(sizeof(char));
+	if (!total)
+		exit(EXIT_FAILURE);
+	total[0] = '\0';
+	while (i <= ac)
+	{
+		ft_check_arg_space(av[i]);
+		if (!av[i][0])
+			ft_error();
+		total = ft_strjoin(total, av[i]);
+		total = ft_strjoin(total, " ");
+		i++;
+	}
+	new_av = ft_split(total, ' ');
+	if (total)
+		free(total);
+	return (new_av);
 }

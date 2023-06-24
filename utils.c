@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 22:38:22 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/24 02:19:40 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/25 00:26:15 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	size_t	i;
 	size_t	j;
 
-	if (!s1)
-		return (s2);
-	else if (!s2)
-		return (s1);
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	j = 0;
 	new = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);

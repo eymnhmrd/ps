@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 02:44:18 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/23 05:47:23 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/25 00:27:52 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	pa(t_stack **a, t_stack **b)
 {
 	t_stack	*tmp;
-	
+
 	if (*b == NULL)
 		return ;
 	tmp = *b;

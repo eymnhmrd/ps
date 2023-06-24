@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 22:38:16 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/24 02:34:43 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/25 00:30:31 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_get_input(char **av, t_stack **a, int ac)
 {
-	char 	**tab = NULL;
+	char	**tab;
 	int		i;
 	int		tab_size;
 
 	i = 0;
 	tab = join_args(av, ac);
 	tab_size = ft_tablen(tab);
-	while(tab[i])
+	while (tab[i])
 	{
 		ft_check_number(tab[i], tab);
 		ft_check_limits(tab[i], tab);
