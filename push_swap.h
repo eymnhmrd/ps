@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 22:38:19 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/25 00:26:47 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/25 06:26:28 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int		find_min(t_stack *st);
 int		find_max(t_stack *st);
 int		max_pos(t_stack *st);
 void	sort_three(t_stack **a);
+void	sort_five(t_stack **stack_a, t_stack **stack_b);
 int		*bubble_sort(int *tab, int size);
 int		*fake_tab(t_stack *a);
 void	algorithm1(t_stack **a, t_stack **b);
@@ -68,5 +69,6 @@ int		ft_strlen(char *s);
 long	ft_atoi(char *str);
 void	ft_putstr(char *str);
 void	ft_error_free(char **tab);
+
 
 #endif

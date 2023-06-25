@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing2.c                                         :+:      :+:    :+:   */
+/*   sort_five.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/22 01:00:58 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/25 06:11:16 by ahamrad          ###   ########.fr       */
+/*   Created: 2023/06/25 02:06:55 by ahamrad           #+#    #+#             */
+/*   Updated: 2023/06/25 02:09:45 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_check_duplicates(char **av, int ac)
+void	sort_five(t_stack **stack_a, t_stack **stack_b)
 {
-	int	i;
-	int	j;
+	int	min;
 
-	i = 0;
-	while (i < ac)
-	{
-		j = i + 1;
-		while (j < ac)
-		{
-			if ((ft_atoi(av[i]) == ft_atoi(av[j])))
-				ft_error_free(av);
-			j++;
-		}
-		i++;
-	}
-}
-
-void	ft_check_limits(char *number, char **tab)
-{
-	if (ft_strlen(number) > 11 || ft_atoi(number) > INT_MAX
-		|| ft_atoi(number) < INT_MIN)
-		ft_error_free(tab);
+	min = find_min(*stack_a);
+	while ((*stack_a)->data != min)
+		rra(stack_a);
+	pb(stack_a, stack_b);
+	min = find_min(*stack_a);
+	while ((*stack_a)->data != min)
+		rra(stack_a);
+	pb(stack_a, stack_b);
+	sort_three(stack_a);
+	pa(stack_a, stack_b);
+	pa(stack_a, stack_b);
 }
