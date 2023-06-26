@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 02:40:51 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/23 05:51:37 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/26 03:22:37 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	push(t_stack **a, int num)
 {
 	t_stack	*node;
 
+	if (a == NULL)
+		return ;
 	node = malloc(sizeof(t_stack));
 	if (!node)
 		return ;

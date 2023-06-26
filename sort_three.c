@@ -6,11 +6,11 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 01:26:09 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/23 03:21:01 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/26 03:24:42 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap.h" 
 
 int	find_min(t_stack *st)
 {
@@ -42,26 +42,18 @@ int	find_max(t_stack *st)
 
 void	sort_three(t_stack **a)
 {
+	if ((*a)->next->data == find_max(*a))
+		rra(a);
 	if ((*a)->data != find_max(*a) && (*a)->data != find_min(*a))
-	{
-		if ((*a)->next->data == find_max(*a))
-			rra(a);
-		else
-			sa(a);
-	}
-	else if ((*a)->data == find_max(*a))
+		sa(a);
+	if ((*a)->data == find_max(*a))
 	{
 		if ((*a)->next->data == find_min(*a))
 			ra(a);
 		else
 		{
+			ra(a);
 			sa(a);
-			rra(a);
 		}
-	}
-	else
-	{
-		rra(a);
-		sa(a);
 	}
 }

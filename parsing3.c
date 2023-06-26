@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 02:47:06 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/25 06:26:22 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/26 03:25:42 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@ char	**join_args(char **av, int ac)
 	total[0] = '\0';
 	while (i <= ac)
 	{
-		ft_check_arg_space(av[i]);
 		if (!av[i][0])
 			ft_error();
+		ft_check_arg_space(av[i]);
 		total = ft_strjoin(total, av[i]);
 		total = ft_strjoin(total, " ");
 		i++;

@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 22:38:16 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/25 02:11:12 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/26 01:44:49 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	main(int argc, char **argv)
 		sort_three(&a);
 	else if (s_size == 5)
 		sort_five(&a, &b);
-	else 
+	else
 	{
 		algorithm1(&a, &b);
 		algorithm2(&a, &b);

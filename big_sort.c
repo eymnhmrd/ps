@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 01:30:52 by ahamrad           #+#    #+#             */
-/*   Updated: 2023/06/23 03:21:08 by ahamrad          ###   ########.fr       */
+/*   Updated: 2023/06/26 02:03:06 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,21 @@ int	*bubble_sort(int *tab, int size)
 		i++;
 	}
 	return (tab);
+}
+
+int min_pos(t_stack *st)
+{
+	int	indice;
+	int	min_value;
+
+	indice = 1;
+	min_value = find_min(st);
+	while (st && st->next && st->data != min_value)
+	{
+		indice++;
+		st = st->next;
+	}
+	return (indice);
 }
 
 int	max_pos(t_stack *st)
